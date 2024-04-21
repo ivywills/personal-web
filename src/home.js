@@ -81,10 +81,10 @@ export default function Home() {
             mt={isMobile ? 4 : 0}
           >
             <Text color={useColorModeValue('gray.100', 'black')}>
-              I'm a 22-year-old computer science graduate from the University of
-              Toronto currently working as the Production Coorinator at
-              LearnFormula, and this website is dedicated to showcasing my past
-              projects and internship experience.
+              I'm a 23-year-old computer science graduate from the University of
+              Toronto currently working as an I.T manager at MPAC, and this
+              website is dedicated to showcasing my past projects and internship
+              experience.
             </Text>
           </Box>
           <Stack
