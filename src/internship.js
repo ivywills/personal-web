@@ -1,5 +1,5 @@
 import React from 'react';
-import { useColorModeValue,Stack, Text, Heading, Box } from '@chakra-ui/react';
+import { useColorModeValue, Stack, Text, Heading, Box } from '@chakra-ui/react';
 
 export default function Internship() {
   return (
@@ -16,7 +16,40 @@ export default function Internship() {
         Work Experience
       </Heading>
       <Stack spacing="8" p="4">
-        <Box bg={useColorModeValue('gray.100', 'gray.700')} p="4" boxShadow="lg" borderRadius="sm">
+        <Box
+          bg={useColorModeValue('gray.100', 'gray.700')}
+          p="4"
+          boxShadow="lg"
+          borderRadius="sm"
+        >
+          <Stack direction="row" alignItems="center">
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }}
+            >
+              Frontend Developer: Municipal Property Assessment Corporation
+            </Text>
+          </Stack>
+          <Text fontSize={{ base: 'sm' }} textAlign={'left'}>
+            I developed React and Angular components in response to Winnipeg's
+            RFP, contributing to the successful procurement of a 10-year
+            multi-million dollar contract. Additionally, I revamped MPAC's
+            frontend security workflows by implementing an OIDC workflow powered
+            by Keycloak, introducing essential features like RBAC, audit logs,
+            and session management. In a cost-effective move, I replaced the
+            existing form management system with the open-source alternative,
+            Form.io, leading to annual savings of $300,000. Furthermore, I
+            addressed security vulnerabilities in the frontend code and
+            Dockerfiles, identified by DeepSource and the AWS ECR scanner,
+            aligning with Winnipeg's security standards..
+          </Text>
+        </Box>
+        <Box
+          bg={useColorModeValue('gray.100', 'gray.700')}
+          p="4"
+          boxShadow="lg"
+          borderRadius="sm"
+        >
           <Stack direction="row" alignItems="center">
             <Text
               fontWeight="semibold"
@@ -37,7 +70,12 @@ export default function Internship() {
             opportunity of filming a podcast with LearnFormula.
           </Text>
         </Box>
-        <Box bg={useColorModeValue('gray.100', 'gray.700')} p="4" boxShadow="lg" borderRadius="sm">
+        <Box
+          bg={useColorModeValue('gray.100', 'gray.700')}
+          p="4"
+          boxShadow="lg"
+          borderRadius="sm"
+        >
           <Stack direction="row" alignItems="center">
             <Text
               fontWeight="semibold"
@@ -55,7 +93,12 @@ export default function Internship() {
             update multiple different blog-based websites.
           </Text>
         </Box>
-        <Box bg={useColorModeValue('gray.100', 'gray.700')} p="4" boxShadow="lg" borderRadius="sm">
+        <Box
+          bg={useColorModeValue('gray.100', 'gray.700')}
+          p="4"
+          boxShadow="lg"
+          borderRadius="sm"
+        >
           <Stack direction="row" alignItems="center">
             <Text
               fontWeight="semibold"
@@ -72,7 +115,12 @@ export default function Internship() {
             property through an interactive timeline.
           </Text>
         </Box>
-        <Box bg={useColorModeValue('gray.100', 'gray.700')} p="4" boxShadow="lg" borderRadius="sm">
+        <Box
+          bg={useColorModeValue('gray.100', 'gray.700')}
+          p="4"
+          boxShadow="lg"
+          borderRadius="sm"
+        >
           <Stack direction="row" alignItems="center">
             <Text
               fontWeight="semibold"
@@ -90,7 +138,12 @@ export default function Internship() {
             a successful 45-minute talk about the coding activities completed.
           </Text>
         </Box>
-        <Box bg={useColorModeValue('gray.100', 'gray.700')} p="4" boxShadow="lg" borderRadius="sm">
+        <Box
+          bg={useColorModeValue('gray.100', 'gray.700')}
+          p="4"
+          boxShadow="lg"
+          borderRadius="sm"
+        >
           <Stack direction="row" alignItems="center">
             <Text
               fontWeight="semibold"
@@ -110,7 +163,12 @@ export default function Internship() {
             .
           </Text>
         </Box>
-        <Box bg={useColorModeValue('gray.100', 'gray.700')} p="4" boxShadow="lg" borderRadius="sm">
+        <Box
+          bg={useColorModeValue('gray.100', 'gray.700')}
+          p="4"
+          boxShadow="lg"
+          borderRadius="sm"
+        >
           <Stack direction="row" alignItems="center">
             <Text
               fontWeight="semibold"

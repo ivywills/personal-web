@@ -35,14 +35,7 @@ export default function Mentorly() {
         </Heading>
         <Text>
           On a small team of developers, I collaborated in the creation of
-          Mentorly. To get started, visit{' '}
-          <a href="https://mentorly-inc.herokuapp.com/">
-            https://mentorly-inc.herokuapp.com/
-          </a>
-          , sign in using the provided email test@org.com and password test.
-        </Text>
-        <Text>
-          Mentorly begins by guiding users through a series of meticulously
+          Mentorly. Mentorly begins by guiding users through a series of meticulously
           crafted forms, where they can provide relevant information about their
           interests and goals.
         </Text>
