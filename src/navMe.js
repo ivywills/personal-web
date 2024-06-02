@@ -90,36 +90,39 @@ export default function Simple() {
           </HStack>
 
           <Flex alignItems={'center'}>
-            <IconButton
-              size="md"
-              href="https://www.linkedin.com/in/ivy-wills-816947186/"
-              icon={
-                colorMode === 'light' ? (
-                  <UseAnimations animation={linkedin} size={24} />
-                ) : (
-                  <UseAnimations
-                    animation={linkedin}
-                    size={24}
-                    strokeColor="#ffffff"
-                  />
-                )
-              }
-            />
-            <IconButton
-              size="md"
-              href="https://github.com/ivywills"
-              icon={
-                colorMode === 'light' ? (
-                  <UseAnimations animation={github} size={24} />
-                ) : (
-                  <UseAnimations
-                    animation={github}
-                    size={24}
-                    strokeColor="#ffffff"
-                  />
-                )
-              }
-            />
+            <a href="https://www.linkedin.com/in/ivy-wills-816947186/">
+              <IconButton
+                size="md"
+                href="https://www.linkedin.com/in/ivy-wills-816947186/"
+                icon={
+                  colorMode === 'light' ? (
+                    <UseAnimations animation={linkedin} size={24} />
+                  ) : (
+                    <UseAnimations
+                      animation={linkedin}
+                      size={24}
+                      strokeColor="#ffffff"
+                    />
+                  )
+                }
+              />
+            </a>
+            <a href="https://github.com/ivywills">
+              <IconButton
+                size="md"
+                icon={
+                  colorMode === 'light' ? (
+                    <UseAnimations animation={github} size={24} />
+                  ) : (
+                    <UseAnimations
+                      animation={github}
+                      size={24}
+                      strokeColor="#ffffff"
+                    />
+                  )
+                }
+              />
+            </a>
             <IconButton
               size="md"
               aria-label="Toggle Dark Mode"
