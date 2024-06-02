@@ -49,15 +49,9 @@ export default function Home() {
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}
-            color={useColorModeValue('gray.100', 'gray.800')} // Update text color
+            color={useColorModeValue('gray.800', 'gray.800')} // Update text color
           >
-            Welcome <br />
-            <Text
-              as={'span'}
-              color={useColorModeValue('purple.500', 'purple.800')}
-            >
-              Ivy Wills
-            </Text>
+            Ivy Wills <br />
           </Heading>
           <Box
             align="center"
