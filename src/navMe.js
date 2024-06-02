@@ -1,4 +1,7 @@
 import { ReactNode } from 'react';
+import UseAnimations from 'react-useanimations';
+import linkedin from 'react-useanimations/lib/linkedin';
+import github from 'react-useanimations/lib/github';
 import {
   Box,
   useColorMode,
@@ -87,6 +90,28 @@ export default function Simple() {
           </HStack>
 
           <Flex alignItems={'center'}>
+            <IconButton
+              size="md"
+              href="https://www.linkedin.com/in/ivy-wills-816947186/"
+              icon={
+                colorMode === 'light' ? (
+                  <UseAnimations animation={github} size={24} />
+                ) : (
+                  <UseAnimations animation={github} size={24} strokeColor="#ffffff" />
+                )
+              }
+            />
+            <IconButton
+              size="md"
+              href="https://github.com/ivywills"
+              icon={
+                colorMode === 'light' ? (
+                  <UseAnimations animation={github} size={24} />
+                ) : (
+                  <UseAnimations animation={github} size={24} strokeColor="#ffffff" />
+                )
+              }
+            />
             <IconButton
               size="md"
               aria-label="Toggle Dark Mode"
