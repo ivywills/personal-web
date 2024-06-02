@@ -70,8 +70,15 @@ export default function Home() {
             mb={-4}
             pos="relative"
             rounded="md"
+            style={{ borderRadius: '8px' }}
           >
-            <img src={NavMe} align="center" layout="fill" />
+            <img
+              src={NavMe}
+              align="center"
+              layout="fill"
+              style={{ borderRadius: '8px' }}
+              rounded="md"
+            />
           </Box>
           <Box
             bg="rgba(128, 128, 128, 0.8)"
