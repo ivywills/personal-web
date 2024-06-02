@@ -56,7 +56,7 @@ export default function Home() {
               as={'span'}
               color={useColorModeValue('purple.500', 'purple.800')}
             >
-              My name is Ivy Wills
+              Ivy Wills
             </Text>
           </Heading>
           <Box
@@ -88,10 +88,10 @@ export default function Home() {
             mt={isMobile ? 4 : 0}
           >
             <Text color={useColorModeValue('gray.100', 'black')}>
-              I'm a 23-year-old computer science graduate from the University of
-              Toronto currently working as an I.T manager at MPAC, and this
-              website is dedicated to showcasing my past projects and internship
-              experience.
+              I'm a computer science graduate from the University of Toronto
+              currently working as an I.T manager and frontend developer at
+              MPAC, and this website is dedicated to showcasing my projects and
+              work experience.
             </Text>
           </Box>
           <Stack
