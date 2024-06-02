@@ -95,9 +95,13 @@ export default function Simple() {
               href="https://www.linkedin.com/in/ivy-wills-816947186/"
               icon={
                 colorMode === 'light' ? (
-                  <UseAnimations animation={github} size={24} />
+                  <UseAnimations animation={linkedin} size={24} />
                 ) : (
-                  <UseAnimations animation={github} size={24} strokeColor="#ffffff" />
+                  <UseAnimations
+                    animation={linkedin}
+                    size={24}
+                    strokeColor="#ffffff"
+                  />
                 )
               }
             />
@@ -108,7 +112,11 @@ export default function Simple() {
                 colorMode === 'light' ? (
                   <UseAnimations animation={github} size={24} />
                 ) : (
-                  <UseAnimations animation={github} size={24} strokeColor="#ffffff" />
+                  <UseAnimations
+                    animation={github}
+                    size={24}
+                    strokeColor="#ffffff"
+                  />
                 )
               }
             />
