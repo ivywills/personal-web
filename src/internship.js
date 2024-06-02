@@ -41,7 +41,7 @@ export default function Internship() {
             Form.io, leading to annual savings of $300,000. Furthermore, I
             addressed security vulnerabilities in the frontend code and
             Dockerfiles, identified by DeepSource and the AWS ECR scanner,
-            aligning with Winnipeg's security standards..
+            aligning with Winnipeg's security standards.
           </Text>
         </Box>
         <Box
