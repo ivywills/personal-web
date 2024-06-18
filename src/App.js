@@ -20,6 +20,14 @@ import Main from './main.js';
 import me from './profile2.jpg';
 import Resume from './resume.js';
 import Internship from './internship.js';
+import posthog from 'posthog-js'
+
+posthog.init('phc_NSTORzx81CehpKATXQpJ5ROdgAXJQ5ikzH8jzX86VB6',
+    {
+        api_host: 'https://us.i.posthog.com',
+        person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
+    }
+)
 
 const App = () => {
   useEffect(() => {
