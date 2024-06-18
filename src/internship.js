@@ -38,7 +38,7 @@ export default function Internship() {
             by Keycloak, introducing essential features like RBAC, audit logs,
             and session management. In a cost-effective move, I replaced the
             existing form management system with the open-source alternative,
-            Form.io, leading to annual savings of $300,000. Furthermore, I
+            Form.io. Furthermore, I
             addressed security vulnerabilities in the frontend code and
             Dockerfiles, identified by DeepSource and the AWS ECR scanner,
             aligning with Winnipeg's security standards.
