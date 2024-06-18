@@ -83,7 +83,7 @@ export default function Home() {
           >
             <Text color={useColorModeValue('gray.100', 'black')}>
               I'm a computer science graduate from the University of Toronto
-              currently working as an IT manager and frontend developer at MPAC,
+              currently working as a frontend developer at MPAC,
               and this website is dedicated to showcasing my projects and work
               experience.
             </Text>
