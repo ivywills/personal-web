@@ -26,13 +26,13 @@ import { PostHogProvider } from 'posthog-js/react'
 posthog.init('phc_NSTORzx81CehpKATXQpJ5ROdgAXJQ5ikzH8jzX86VB6',
     {
         api_host: 'https://us.i.posthog.com',
-        person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
+        person_profiles: 'identified_only'
     }
 )
 
 const App = () => {
   useEffect(() => {
-    document.title = 'Ivy'; // Set the new title here
+    document.title = 'Ivy';
   }, []);
 
   return (
