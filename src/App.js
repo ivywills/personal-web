@@ -21,6 +21,7 @@ import me from './profile2.jpg';
 import Resume from './resume.js';
 import Internship from './internship.js';
 import posthog from 'posthog-js'
+import { PostHogProvider } from 'posthog-js/react'
 
 posthog.init('phc_NSTORzx81CehpKATXQpJ5ROdgAXJQ5ikzH8jzX86VB6',
     {
@@ -35,6 +36,7 @@ const App = () => {
   }, []);
 
   return (
+    <PostHogProvider client={posthog}>
     <ChakraProvider theme={theme}>
       <Router>
         <NavMe />
@@ -45,7 +47,8 @@ const App = () => {
           <Route path="/internship" element={<Internship />} />
         </Routes>
       </Router>
-    </ChakraProvider>
+      </ChakraProvider>
+      </PostHogProvider>
   );
 };
 
