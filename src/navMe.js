@@ -40,7 +40,7 @@ export default function Simple() {
 
   const navLinks = (
     <HStack as="nav" spacing={4}>
-      <Link href="/" class="plausible-event-name=Home Button" onClick={tinyanalytics.goal('7hyckri678r10uiy')}>Home</Link>
+      <Link href="/" class="plausible-event-name=Home Button">Home</Link>
       <Link href="/projects">Projects</Link>
       {/* <Link href="/resume">Resume</Link> */}
       <Link href="/internship">Work Experience</Link>
