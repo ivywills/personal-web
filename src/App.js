@@ -51,7 +51,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="/internship" element={<Internship />} />
+          <Route path="/work" element={<Internship />} />
         </Routes>
       </Router>
       </ChakraProvider>
