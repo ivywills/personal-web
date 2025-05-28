@@ -27,7 +27,8 @@ export default function Internship() {
               fontWeight="semibold"
               fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }}
             >
-              Frontend Developer: Municipal Property Assessment Corporation
+              Fullstack Developer and IT Systems manager: Municipal Property
+              Assessment Corporation
             </Text>
           </Stack>
           <Text fontSize={{ base: 'sm' }} textAlign={'left'}>
@@ -38,10 +39,9 @@ export default function Internship() {
             by Keycloak, introducing essential features like RBAC, audit logs,
             and session management. In a cost-effective move, I replaced the
             existing form management system with the open-source alternative,
-            Form.io. Furthermore, I
-            addressed security vulnerabilities in the frontend code and
-            Dockerfiles, identified by DeepSource and the AWS ECR scanner,
-            aligning with Winnipeg's security standards.
+            Form.io. Furthermore, I addressed security vulnerabilities in the
+            frontend code and Dockerfiles, identified by DeepSource and the AWS
+            ECR scanner, aligning with Winnipeg's security standards.
           </Text>
         </Box>
         <Box
@@ -81,16 +81,16 @@ export default function Internship() {
               fontWeight="semibold"
               fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }}
             >
-              PHP Developer: Codepxl
+              Software Developer: Codepxl
             </Text>
           </Stack>
           <Text fontSize={{ base: 'sm' }} textAlign={'left'}>
-            As a PHP Developer at Codepxl, I was responsible for individually
-            updating Codepxl platforms. I wrote Laravel controllers and API
-            calls to sort and return readable data. Additionally, I created
-            visually appealing UI, for the program SNAP, using Vue.js and
-            JavaScript. Moreover, I utilized WordPress to meet client needs and
-            update multiple different blog-based websites.
+            As a software developer at Codepxl, I was responsible for
+            individually updating Codepxl platforms. I wrote Laravel controllers
+            and API calls to sort and return readable data. Additionally, I
+            created visually appealing UI, for the program SNAP, using Vue.js
+            and JavaScript. Moreover, I utilized WordPress to meet client needs
+            and update multiple different blog-based websites.
           </Text>
         </Box>
         <Box
@@ -108,7 +108,7 @@ export default function Internship() {
             </Text>
           </Stack>
           <Text fontSize={{ base: 'sm' }} textAlign={'left'}>
-            As a React Developer at Municipal Property Assessment Corporation, I
+            As a React developer at Municipal Property Assessment Corporation, I
             worked with Python and PostgreSQL to create a lookup service for
             sorting and searching property types. Using React, I developed
             frontend software that allowed users to view the history of a
