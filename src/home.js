@@ -1,7 +1,7 @@
 import React from 'react';
 import Me from './imgs/no_background.png';
 import gearThemeLight from './imgs/beautiful-forested-mountains-fog.jpg';
-import gearThemeDark from './imgs/northlandscapes-iceland-vik-foggy-coastline-01.jpg';
+import gearThemeDark from './imgs/northlandscapes-iceland-vik-foggy-coastline.jpg';
 
 import {
   Box,
