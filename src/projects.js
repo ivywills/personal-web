@@ -13,8 +13,10 @@ import SNAP from './projects/snap.js';
 import Doodle from './projects/doodle.js';
 import RayTracer from './projects/raytracer.js';
 import WetechBlog from './projects/wetech.js';
+import BookFinder from './projects/book-finder.js';
 
 const components = [
+  { name: 'BookFinder', component: BookFinder },
   { name: 'Mentorly', component: Mentorly },
   { name: 'WetechBlog', component: WetechBlog },
   { name: 'RayTracer', component: RayTracer },
