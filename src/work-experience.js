@@ -1,6 +1,42 @@
 import React from 'react';
 import { useColorModeValue, Stack, Text, Heading, Box } from '@chakra-ui/react';
 
+const WorkExperienceBox = ({ title, subTitle, description }) => {
+  return (
+    <Box
+      bg={useColorModeValue('gray.100', 'gray.700')}
+      p="4"
+      boxShadow="lg"
+      borderRadius="sm"
+      _hover={{
+        transform: 'scale(1.005)',
+        transition: 'transform 0.3s ease-in-out',
+      }}
+    >
+      <Stack direction="row" alignItems="center">
+        <Heading
+          as="h3"
+          fontWeight="semibold"
+          fontSize={{ base: 'lg', md: 'xl' }}
+        >
+          {title}{' '}
+          <Text
+            as="span"
+            fontWeight="normal"
+            fontSize={{ base: 'md', md: 'xl' }}
+            color={useColorModeValue('gray.600', 'gray.400')}
+          >
+            {subTitle}
+          </Text>
+        </Heading>
+      </Stack>
+      <Text mt="8px" fontSize={{ base: 'sm' }} textAlign={'left'}>
+        {description}
+      </Text>
+    </Box>
+  );
+};
+
 export default function WorkExperience() {
   return (
     <Box py="8">
@@ -16,174 +52,41 @@ export default function WorkExperience() {
         Work Experience
       </Heading>
       <Stack spacing="8" p="4">
-        <Box
-          bg={useColorModeValue('gray.100', 'gray.700')}
-          p="4"
-          boxShadow="lg"
-          borderRadius="sm"
-        >
-          <Stack direction="row" alignItems="center">
-            <Text
-              fontWeight="semibold"
-              fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }}
-            >
-              Fullstack Developer and IT Systems manager: Municipal Property
-              Assessment Corporation
-            </Text>
-          </Stack>
-          <Text fontSize={{ base: 'sm' }} textAlign={'left'}>
-            I developed React and Angular components in response to Winnipeg's
-            RFP, contributing to the successful procurement of a 10-year
-            multi-million dollar contract. Additionally, I revamped MPAC's
-            frontend security workflows by implementing an OIDC workflow powered
-            by Keycloak, introducing essential features like RBAC, audit logs,
-            and session management. In a cost-effective move, I replaced the
-            existing form management system with the open-source alternative,
-            Form.io. Furthermore, I addressed security vulnerabilities in the
-            frontend code and Dockerfiles, identified by DeepSource and the AWS
-            ECR scanner, aligning with Winnipeg's security standards.
-          </Text>
-        </Box>
-        <Box
-          bg={useColorModeValue('gray.100', 'gray.700')}
-          p="4"
-          boxShadow="lg"
-          borderRadius="sm"
-        >
-          <Stack direction="row" alignItems="center">
-            <Text
-              fontWeight="semibold"
-              fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }}
-            >
-              Production Coorinator: LearnFormula Inc.
-            </Text>
-          </Stack>
-          <Text fontSize={{ base: 'sm' }} textAlign={'left'}>
-            I am responsible for handling various tasks to optimize the filming
-            process for LearnFormula podcasts. I actively facilitate seamless
-            communication between the development and production teams, enabling
-            us to automate the podcast production process. Coordinating the
-            workflow for the production team is another crucial aspect of my
-            responsibilities, ensuring that new podcasts are properly onboarded.
-            Additionally, I take charge of running a targeted email campaign,
-            introducing potential engineers, lawyers, and accountants to the
-            opportunity of filming a podcast with LearnFormula.
-          </Text>
-        </Box>
-        <Box
-          bg={useColorModeValue('gray.100', 'gray.700')}
-          p="4"
-          boxShadow="lg"
-          borderRadius="sm"
-        >
-          <Stack direction="row" alignItems="center">
-            <Text
-              fontWeight="semibold"
-              fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }}
-            >
-              Software Developer: Codepxl
-            </Text>
-          </Stack>
-          <Text fontSize={{ base: 'sm' }} textAlign={'left'}>
-            As a software developer at Codepxl, I was responsible for
-            individually updating Codepxl platforms. I wrote Laravel controllers
-            and API calls to sort and return readable data. Additionally, I
-            created visually appealing UI, for the program SNAP, using Vue.js
-            and JavaScript. Moreover, I utilized WordPress to meet client needs
-            and update multiple different blog-based websites.
-          </Text>
-        </Box>
-        <Box
-          bg={useColorModeValue('gray.100', 'gray.700')}
-          p="4"
-          boxShadow="lg"
-          borderRadius="sm"
-        >
-          <Stack direction="row" alignItems="center">
-            <Text
-              fontWeight="semibold"
-              fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }}
-            >
-              React Developer: Municipal Property Assessment Corporation
-            </Text>
-          </Stack>
-          <Text fontSize={{ base: 'sm' }} textAlign={'left'}>
-            As a React developer at Municipal Property Assessment Corporation, I
-            worked with Python and PostgreSQL to create a lookup service for
-            sorting and searching property types. Using React, I developed
-            frontend software that allowed users to view the history of a
-            property through an interactive timeline.
-          </Text>
-        </Box>
-        <Box
-          bg={useColorModeValue('gray.100', 'gray.700')}
-          p="4"
-          boxShadow="lg"
-          borderRadius="sm"
-        >
-          <Stack direction="row" alignItems="center">
-            <Text
-              fontWeight="semibold"
-              fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }}
-            >
-              Robotics Teacher: St. Louis Catholic Elementary School
-            </Text>
-          </Stack>
-          <Text fontSize={{ base: 'sm' }} textAlign={'left'}>
-            As a Robotics Teacher at St. Louis Catholic Elementary School, I
-            explained key concepts to students in grades 3-4 by creating
-            slideshows and demonstrating the use of robots and iPads. This
-            approach helped the students engage with technology. Additionally, I
-            created a final parent presentation on PowerPoint, which resulted in
-            a successful 45-minute talk about the coding activities completed.
-          </Text>
-        </Box>
-        <Box
-          bg={useColorModeValue('gray.100', 'gray.700')}
-          p="4"
-          boxShadow="lg"
-          borderRadius="sm"
-        >
-          <Stack direction="row" alignItems="center">
-            <Text
-              fontWeight="semibold"
-              fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }}
-            >
-              WEtech Alliance Summer Intern
-            </Text>
-          </Stack>
-          <Text fontSize={{ base: 'sm' }} textAlign={'left'}>
-            As a Summer Intern at WEtech Alliance, I represented the
-            organization at several technology companies and interviewed
-            business owners to document the growing technology initiative in
-            Windsor. To read the blog, please visit{' '}
-            <a href="https://www.wetech-alliance.com/2019/10/02/ivys-league-final-summer-blog-my-experience-as-a-wetech-intern/">
-              https://www.wetech-alliance.com/2019/10/02/ivys-league-final-summer-blog-my-experience-as-a-wetech-intern/
-            </a>
-            .
-          </Text>
-        </Box>
-        <Box
-          bg={useColorModeValue('gray.100', 'gray.700')}
-          p="4"
-          boxShadow="lg"
-          borderRadius="sm"
-        >
-          <Stack direction="row" alignItems="center">
-            <Text
-              fontWeight="semibold"
-              fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }}
-            >
-              Medical Office Assistant
-            </Text>
-          </Stack>
-          <Text fontSize={{ base: 'sm' }} textAlign={'left'}>
-            As a Medical Office Assistant, I used an electronic medical records
-            repository to update and organize referral forms and handouts. This
-            streamlined the process and helped nurses find the necessary forms
-            promptly.
-          </Text>
-        </Box>
+        <WorkExperienceBox
+          title="Fullstack Developer and IT Systems Manager"
+          subTitle="Municipal Property Assessment Corporation"
+          description="Here, I developed React and Angular components to meet Winnipeg's RFP requirements. This helped secure a 10-year, multi-million dollar contract. I also modernized MPAC's frontend security workflows by implementing an OIDC solution with Keycloak. This introduced RBAC, audit logs, and session management for improved security. I replaced Flowable with the open-source Form.io, saving $400K annually. The new system maintained all necessary form management capabilities. Additionally, I identified and fixed security vulnerabilities in frontend code and Dockerfiles, ensuring SOC2 compliance."
+        />
+        <WorkExperienceBox
+          title="Software Developer"
+          subTitle="Codepxl"
+          description="At Codepxl, I built a responsive UI for the SNAP school system using Vue.js and Flexbox. This allowed students to complete lesson plans and quizzes more efficiently. I developed Laravel controllers and API endpoints to improve backend performance. This reduced API latency by 30%. I also updated multiple WordPress sites, delivering custom features and design updates to meet client needs."
+        />
+        <WorkExperienceBox
+          title="React Developer"
+          subTitle="Municipal Property Assessment Corporation"
+          description="At MPAC, I created an asynchronous Python REST API to interface with MongoDB. This improved data retrieval and storage. I also developed interactive React.js components, including a property history timeline. Users could easily explore and view property details through this engaging interface."
+        />
+        <WorkExperienceBox
+          title="Production Coordinator"
+          subTitle="LearnFormula Inc."
+          description="I was responsible for handling various tasks to optimize the filming process for LearnFormula podcasts. I facilitated seamless communication between the development and production teams. This helped automate the podcast production process. Coordinating the workflow for the production team was another important part of my role. I ensured that new podcasts were properly onboarded. Additionally, I took charge of running a targeted email campaign. This campaign introduced potential engineers, lawyers, and accountants to the opportunity of filming a podcast with LearnFormula."
+        />
+        <WorkExperienceBox
+          title="Robotics Teacher"
+          subTitle="St. Louis Catholic Elementary School"
+          description="As a Robotics Teacher at St. Louis Catholic Elementary School, I explained key concepts to students in grades 3-4 by creating slideshows and demonstrating the use of robots and iPads. This approach helped the students engage with technology. Additionally, I created a final parent presentation on PowerPoint, which resulted in a successful 45-minute talk about the coding activities completed."
+        />
+        <WorkExperienceBox
+          title="WEtech Alliance Summer Intern"
+          subTitle=""
+          description="As a Summer Intern at WEtech Alliance, I represented the organization at several technology companies and interviewed business owners to document the growing technology initiative in Windsor."
+        />
+        <WorkExperienceBox
+          title="Medical Office Assistant"
+          subTitle=""
+          description="As a Medical Office Assistant, I used an electronic medical records repository to update and organize referral forms and handouts. This streamlined the process and helped nurses find the necessary forms promptly."
+        />
       </Stack>
     </Box>
   );

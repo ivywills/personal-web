@@ -78,8 +78,8 @@ export default function Home() {
             rounded="md"
             style={{ borderRadius: '8px' }}
             _hover={{
-              transform: 'scale(1.1)', // Slight zoom effect
-              transition: 'transform 0.3s ease-in-out', // Smooth transition
+              transform: 'scale(1.1)',
+              transition: 'transform 0.3s ease-in-out',
             }}
           >
             <img
