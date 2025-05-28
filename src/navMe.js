@@ -40,10 +40,12 @@ export default function Simple() {
 
   const navLinks = (
     <HStack as="nav" spacing={4}>
-      <Link href="/" class="plausible-event-name=Home Button">Home</Link>
+      <Link href="/" class="plausible-event-name=Home Button">
+        Home
+      </Link>
       <Link href="/projects">Projects</Link>
       {/* <Link href="/resume">Resume</Link> */}
-      <Link href="/internship">Work Experience</Link>
+      <Link href="/work">Work Experience</Link>
     </HStack>
   );
 
@@ -58,7 +60,7 @@ export default function Simple() {
       {/* <MenuItem>
         <Link href="/resume">Resume</Link>
       </MenuItem> */}
-      <Link href="/internship">
+      <Link href="/work">
         <MenuItem>Work Experience</MenuItem>
       </Link>
     </>
