@@ -6,12 +6,12 @@ export default function WorkExperience() {
     <Box py="8">
       <Heading
         fontWeight={500}
-        fontSize={{ base: '3xl', sm: '4xl', md: '5xl' }}
-        lineHeight={'110%'}
-        color={'purple.400'}
-        textAlign="center"
-        mt="4"
-        mb="8"
+        fontSize={{ base: '2xl', md: '4xl' }}
+        lineHeight="110%"
+        color={useColorModeValue('gray.800', 'gray.300')}
+        textAlign="left"
+        spacing="8"
+        p="4"
       >
         Work Experience
       </Heading>

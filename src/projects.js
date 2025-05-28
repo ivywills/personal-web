@@ -33,10 +33,12 @@ export default function Projects() {
       <Container maxW="container.xl">
         <Heading
           fontWeight={500}
-          fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+          fontSize={{ base: '2xl', md: '4xl' }}
           lineHeight="110%"
-          color={useColorModeValue('purple.300', 'purple.800')}
-          textAlign="center"
+          color={useColorModeValue('gray.800', 'gray.300')}
+          textAlign="left"
+          spacing="4"
+          px="4"
         >
           Projects
         </Heading>
