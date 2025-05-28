@@ -1,5 +1,5 @@
 import React from 'react';
-import NavMe from './imgs/no_background.png';
+import Me from './imgs/no_background.png';
 import gearThemeLight from './imgs/beautiful-forested-mountains-fog.jpg';
 import gearThemeDark from './imgs/northlandscapes-iceland-vik-foggy-coastline-01.jpg';
 
@@ -13,6 +13,26 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
+const CustomButton = ({ href, children }) => {
+  return (
+    <a href={href}>
+      <Button
+        colorScheme={'green'}
+        bg={'green.400'}
+        rounded={'full'}
+        px={6}
+        _hover={{
+          bg: 'green.300',
+          transform: 'scale(1.1)',
+          transition: 'transform 0.3s ease-in-out',
+        }}
+      >
+        {children}
+      </Button>
+    </a>
+  );
+};
+
 export default function Home() {
   const isMobile = window.innerWidth < 768;
   const gearTheme = useColorModeValue(gearThemeLight, gearThemeDark);
@@ -24,7 +44,7 @@ export default function Home() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        minHeight: '100vh',
+        minHeight: '92vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -41,7 +61,7 @@ export default function Home() {
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}
-            color={useColorModeValue('gray.800', 'gray.800')} // Update text color
+            color={useColorModeValue('gray.800', 'gray.800')}
           >
             Ivy Wills <br />
           </Heading>
@@ -50,16 +70,20 @@ export default function Home() {
             textAlign="center"
             alignSelf="center"
             bg="gray.100"
-            w={isMobile ? '210px' : '270px'}
+            w={isMobile ? '110px' : '170px'}
             mt={isMobile ? 0 : -8}
             mx={-1}
             mb={-4}
             pos="relative"
             rounded="md"
             style={{ borderRadius: '8px' }}
+            _hover={{
+              transform: 'scale(1.1)', // Slight zoom effect
+              transition: 'transform 0.3s ease-in-out', // Smooth transition
+            }}
           >
             <img
-              src={NavMe}
+              src={Me}
               align="center"
               layout="fill"
               style={{ borderRadius: '8px' }}
@@ -74,10 +98,12 @@ export default function Home() {
             mt={isMobile ? 4 : 0}
           >
             <Text color={useColorModeValue('gray.100', 'black')}>
-              I'm a computer science graduate from the University of Toronto
-              currently working as a frontend developer at MPAC, and this
-              website is dedicated to showcasing my projects and work
-              experience.
+              I am an experienced Fullstack Developer. Skilled in React.js,
+              Angular, Python, and modern web technologies, I design and
+              implement responsive, user-centric interfaces and efficient
+              backend systems. I have a proven track record in leading
+              development efforts, optimizing performance, and implementing
+              secure, efficient workflows.
             </Text>
           </Box>
           <Stack
@@ -87,32 +113,8 @@ export default function Home() {
             alignSelf={'center'}
             position={'relative'}
           >
-            <a href="/projects">
-              <Button
-                colorScheme={'green'}
-                bg={'green.400'}
-                rounded={'full'}
-                px={6}
-                _hover={{
-                  bg: 'green.500',
-                }}
-              >
-                Projects
-              </Button>
-            </a>
-            <a href="/internship">
-              <Button
-                colorScheme={'green'}
-                bg={'green.400'}
-                rounded={'full'}
-                px={6}
-                _hover={{
-                  bg: 'green.500',
-                }}
-              >
-                Work Experience
-              </Button>
-            </a>
+            <CustomButton href="/projects">Projects</CustomButton>
+            <CustomButton href="/work">Work Experience</CustomButton>
           </Stack>
         </Stack>
       </Container>
