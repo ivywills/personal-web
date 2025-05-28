@@ -58,6 +58,10 @@ export default function Projects() {
                   p={6}
                   overflow={'hidden'}
                   mb={8}
+                  _hover={{
+                    transform: 'scale(1.04)',
+                    transition: 'transform 0.3s ease-in-out',
+                  }}
                 >
                   <Component key={componentData.name} />
                 </Box>
