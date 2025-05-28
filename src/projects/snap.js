@@ -1,21 +1,11 @@
 import React from 'react';
 import { Box, Heading, Text, Stack } from '@chakra-ui/react';
-import SNAP from './imgs/SNap.jpg';
+import SNAP from './imgs/snap.png';
 
 export default function Snap() {
   return (
     <>
-      <Box
-        d={'flex'}
-        align={'center'}
-        justify={'center'}
-        bg={'gray.100'}
-        maxW={'445px'}
-        w={'full'}
-        mt={-3}
-        mb={6}
-        pos={'relative'}
-      >
+      <Box align={'center'} mt={-3} mx={-3} mb={6} pos={'relative'}>
         <img
           src={SNAP}
           align={'center'}

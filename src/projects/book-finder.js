@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Heading, Text, Stack } from '@chakra-ui/react';
 import Book from './imgs/book-finder.png';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 export default function BookFinder() {
   return (
@@ -16,7 +17,14 @@ export default function BookFinder() {
       </Box>
       <Stack spacing={4}>
         <Heading fontSize={'2xl'} fontFamily={'body'}>
-          Book Finder
+          <a
+            href="https://book-finder.ivywills.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            Book Finder <ExternalLinkIcon mx="2px" />
+          </a>
         </Heading>
         <Text>
           Book Finder is a web application I developed to provide personalized

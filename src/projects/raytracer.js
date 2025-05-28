@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Heading, Text, Stack } from '@chakra-ui/react';
-import Ray from './imgs/ray1.png';
+import Ray from './imgs/ray-tracer.png';
 
 export default function RayTracer() {
   return (
