@@ -59,7 +59,7 @@ export default function Home() {
         >
           <Heading
             fontWeight={600}
-            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+            fontSize={{ base: '4xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}
             color={useColorModeValue('gray.800', 'gray.800')}
           >
@@ -70,7 +70,7 @@ export default function Home() {
             textAlign="center"
             alignSelf="center"
             bg="gray.100"
-            w={isMobile ? '110px' : '170px'}
+            w={isMobile ? '150px' : '170px'}
             mt={isMobile ? 0 : -8}
             mx={-1}
             mb={-4}
@@ -97,7 +97,10 @@ export default function Home() {
             py={2}
             mt={isMobile ? 4 : 0}
           >
-            <Text color={useColorModeValue('gray.100', 'black')}>
+            <Text
+              fontSize={{ base: 'sm', md: 'md' }}
+              color={useColorModeValue('gray.100', 'black')}
+            >
               I am an experienced Fullstack Developer. Skilled in React.js,
               Angular, Python, and modern web technologies, I design and
               implement responsive, user-centric interfaces and efficient
