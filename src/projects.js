@@ -8,12 +8,11 @@ import {
   Flex,
   SimpleGrid,
 } from '@chakra-ui/react';
-import Mentorly from './mentorly.js';
-import SNAP from './snap.js';
-import Eventual from './eventual.js';
-import Doodle from './doodle.js';
-import RayTracer from './raytracer.js';
-import WetechBlog from './wetech.js';
+import Mentorly from './projects/mentorly.js';
+import SNAP from './projects/snap.js';
+import Doodle from './projects/doodle.js';
+import RayTracer from './projects/raytracer.js';
+import WetechBlog from './projects/wetech.js';
 
 const components = [
   { name: 'Mentorly', component: Mentorly },
@@ -21,7 +20,6 @@ const components = [
   { name: 'RayTracer', component: RayTracer },
   { name: 'SNAP', component: SNAP },
   { name: 'Doodle', component: Doodle },
-  { name: 'Eventual', component: Eventual },
 ];
 
 export default function Projects() {
