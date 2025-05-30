@@ -101,7 +101,7 @@ export default function Home() {
               fontSize={{ base: 'sm', md: 'md' }}
               color={useColorModeValue('gray.100', 'black')}
             >
-              I am an experienced Fullstack Developer. Skilled in React.js,
+              I am an experienced Full-stack Developer. Skilled in React.js,
               Angular, Python, and modern web technologies, I design and
               implement responsive, user-centric interfaces and efficient
               backend systems. I have a proven track record in leading
