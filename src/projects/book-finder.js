@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Heading, Text, Stack } from '@chakra-ui/react';
 import Book from './imgs/book-finder.png';
 import { ExternalLinkIcon } from '@chakra-ui/icons';

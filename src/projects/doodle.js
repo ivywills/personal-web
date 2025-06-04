@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Heading, Text, Stack, AspectRatio } from '@chakra-ui/react';
 import YouTube from 'react-youtube';
 
@@ -30,8 +29,7 @@ export default function Doodle() {
           Jump. Doodle Jump is a fun game where players control Doodle, guiding
           them upwards on platforms. The player can avoid obstacles, collect
           power-ups, and aim to advance to harder levels. The simple graphics,
-          vibrant colors, and addictive gameplay make it a classic experience
-          even in Assembly.
+          vibrant colors, and addictive gameplay make it a classic experience.
         </Text>
         <Text color={'gray.500'}>Fall 2020</Text>
       </Stack>

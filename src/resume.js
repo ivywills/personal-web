@@ -1,4 +1,3 @@
-import React from 'react';
 import resumePic from './imgs/resume.png';
 import { Center, Stack } from '@chakra-ui/react';
 

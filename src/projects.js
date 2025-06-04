@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   useBreakpointValue,
   Box,
@@ -12,14 +11,12 @@ import Mentorly from './projects/mentorly.js';
 import SNAP from './projects/snap.js';
 import Doodle from './projects/doodle.js';
 import RayTracer from './projects/raytracer.js';
-import WetechBlog from './projects/wetech.js';
 import BookFinder from './projects/book-finder.js';
 
 const components = [
   { name: 'BookFinder', component: BookFinder },
   { name: 'Mentorly', component: Mentorly },
   { name: 'RayTracer', component: RayTracer },
-  { name: 'WetechBlog', component: WetechBlog },
   { name: 'SNAP', component: SNAP },
   { name: 'Doodle', component: Doodle },
 ];

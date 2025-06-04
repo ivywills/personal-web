@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Heading, Text, Stack } from '@chakra-ui/react';
 import HandShake from './imgs/handshake_men_01.jpg';
 
@@ -25,10 +24,11 @@ export default function Mentorly() {
           Mentorly
         </Heading>
         <Text>
-          On a small team of developers, I collaborated in the creation of
-          Mentorly. Mentorly begins by guiding users through a series of
-          meticulously crafted forms, where they can provide relevant
-          information about their interests and goals.
+          Mentorly is a mentorship program that uses a series of questionnaires
+          to match mentors with mentees On a small team of developers, I
+          collaborated in the creation of Mentorly. Mentorly begins by guiding
+          users through a series of meticulously crafted forms, where they can
+          provide relevant information about their interests and goals.
         </Text>
         <Text>
           Once the matching process is complete, Mentorly provides users with a

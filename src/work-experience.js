@@ -1,4 +1,3 @@
-import React from 'react';
 import { useColorModeValue, Stack, Text, Heading, Box } from '@chakra-ui/react';
 
 const WorkExperienceBox = ({ title, subTitle, description }) => {
@@ -55,7 +54,7 @@ export default function WorkExperience() {
         <WorkExperienceBox
           title="Fullstack Developer and IT Systems Manager"
           subTitle="Municipal Property Assessment Corporation"
-          description="Here, I developed React and Angular components to meet Winnipeg's RFP requirements. This helped secure a 10-year, multi-million dollar contract. I also modernized MPAC's frontend security workflows by implementing an OIDC solution with Keycloak. This introduced RBAC, audit logs, and session management for improved security. I replaced Flowable with the open-source Form.io, saving $400K annually. The new system maintained all necessary form management capabilities. Additionally, I identified and fixed security vulnerabilities in frontend code and Dockerfiles, ensuring SOC2 compliance."
+          description="Here, I developed React and Angular components to meet Winnipeg's RFP requirements. This helped secure a five-year, multi-million dollar contract. I also modernized MPAC's frontend security workflows by implementing an OIDC solution with Keycloak. This introduced RBAC, audit logs, and session management for improved security. I replaced Flowable with the open-source Form.io, saving $400K annually. The new system maintained all necessary form management capabilities. Additionally, I identified and fixed security vulnerabilities in frontend code and Dockerfiles, ensuring SOC2 compliance."
         />
         <WorkExperienceBox
           title="Software Developer"

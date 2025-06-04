@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Heading, Text, Stack } from '@chakra-ui/react';
 import SNAP from './imgs/snap.png';
 

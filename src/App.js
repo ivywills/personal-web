@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChakraProvider, theme } from '@chakra-ui/react';
 import Nav from './nav.js';
 import Home from './home.js';
