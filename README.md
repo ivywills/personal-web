@@ -1,3 +1,13 @@
+# Personal Website
+
+This is my personal website, built to showcase my projects, resume, and work experience.
+
+## Tech Stack
+
+- React (with Create React App)
+- Chakra UI (for styling and components)
+- React Router (for client-side routing)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
