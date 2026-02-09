@@ -56,7 +56,8 @@ export default function Projects() {
           size="lg"
           mb={10}
           textAlign="center"
-          color={useColorModeValue('gray.800', 'gray.200')}
+          bgGradient="linear(to-r, blue.400, cyan.400)"
+          bgClip="text"
         >
           Projects
         </Heading>
@@ -77,7 +78,17 @@ export default function Projects() {
                   boxShadow="lg"
                   rounded="lg"
                   overflow="hidden"
-                  whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                  whileHover={{
+                    y: -12,
+                    boxShadow: '0 20px 40px rgba(0, 0, 0, 0.2)',
+                    transition: { duration: 0.3 }
+                  }}
+                  position="relative"
+                  _hover={{
+                    '& .project-overlay': {
+                      opacity: 1
+                    }
+                  }}
                 >
                   <Box p={6}>
                     <Component />

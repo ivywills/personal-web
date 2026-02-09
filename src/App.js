@@ -2,6 +2,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
 import theme from './theme';
 import Nav from './components/Nav';
+import ScrollProgress from './components/ScrollProgress';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Spinner, Center } from '@chakra-ui/react';
 
@@ -22,6 +23,7 @@ const App = () => {
   return (
     <ChakraProvider theme={theme}>
       <Router>
+        <ScrollProgress />
         <Nav />
         <Suspense fallback={<LoadingFallback />}>
           <Routes>

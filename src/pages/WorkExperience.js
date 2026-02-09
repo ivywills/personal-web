@@ -97,22 +97,25 @@ const ExperienceCard = ({ exp, index }) => {
           {exp.description}
         </Text>
 
-        <Stack direction="row" wrap="wrap" spacing={2} mt={2}>
-          {exp.tags.map(tag => (
-            <Text
-              key={tag}
-              fontSize="xs"
-              fontWeight="semibold"
-              bg={tagBg}
-              color="blue.600"
-              px={3}
-              py={1}
-              rounded="full"
-            >
-              {tag}
-            </Text>
-          ))}
-        </Stack>
+
+        {exp.tags && (
+          <Stack direction="row" wrap="wrap" spacing={2} mt={2}>
+            {exp.tags.map(tag => (
+              <Text
+                key={tag}
+                fontSize="xs"
+                fontWeight="semibold"
+                bg={tagBg}
+                color="blue.600"
+                px={3}
+                py={1}
+                rounded="full"
+              >
+                {tag}
+              </Text>
+            ))}
+          </Stack>
+        )}
       </Stack>
     </MotionBox>
   );
@@ -127,7 +130,8 @@ export default function WorkExperience() {
           size="lg"
           mb={8}
           textAlign="center"
-          color={useColorModeValue('gray.800', 'gray.200')}
+          bgGradient="linear(to-r, blue.400, cyan.400)"
+          bgClip="text"
         >
           Work Experience
         </Heading>
