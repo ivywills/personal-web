@@ -145,7 +145,7 @@ export default function Home() {
         {/* Animated Scroll Indicator */}
         <Box
           position="absolute"
-          bottom="50px"
+          bottom="80px"
           left="50%"
           transform="translateX(-50%)"
           cursor="pointer"
@@ -161,20 +161,13 @@ export default function Home() {
           }}
         >
           <VStack spacing={1}>
-            <Text
-              fontSize="lg"
-              fontWeight="bold"
-              color="blue.600"
-            >
-              Skills
-            </Text>
             <Box
               as="div"
               animation="bounce 2s infinite"
               sx={{
                 '@keyframes bounce': {
                   '0%, 100%': { transform: 'translateY(0)' },
-                  '50%': { transform: 'translateY(-10px)' },
+                  '50%': { transform: 'translateY(-2px)' },
                 }
               }}
             >
