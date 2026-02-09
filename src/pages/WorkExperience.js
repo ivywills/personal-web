@@ -29,42 +29,35 @@ const experiences = [
   {
     title: "Software Developer",
     company: "Codepxl",
-    period: "2020 - 2022",
+    period: "2022",
     description: "Built a responsive UI for the SNAP school system using Vue.js and Flexbox, improving efficiency for students. Developed Laravel controllers and API endpoints, reducing API latency by 30%. Updated multiple WordPress sites with custom features and designs.",
     tags: ["Vue.js", "Laravel", "WordPress", "API"]
   },
   {
     title: "React Developer",
     company: "Municipal Property Assessment Corporation",
-    period: "2019 - 2020",
+    period: "2020",
     description: "Created an asynchronous Python REST API for MongoDB interface, improving data handling. Developed interactive React.js components including a property history timeline for enhanced user experience.",
     tags: ["React", "Python", "MongoDB", "REST API"]
   },
   {
-    title: "Production Coordinator",
-    company: "LearnFormula Inc.",
-    period: "2018 - 2019",
-    description: "Optimized filming process for podcasts and facilitated communication between development and production teams. Coordinated workflow for production team and managed targeted email campaigns.",
-    tags: ["coordination", "production", "email-marketing"]
-  },
-  {
     title: "Robotics Teacher",
     company: "St. Louis Catholic Elementary School",
-    period: "2017 - 2018",
+    period: "2018",
     description: "Taught key robotics concepts to grades 3-4 students using hands-on demonstrations with robots and iPads. Created engaging presentations for parents.",
     tags: ["teaching", "robotics", "presentation"]
   },
   {
     title: "WEtech Alliance Summer Intern",
     company: "WEtech Alliance",
-    period: "2017",
+    period: "2019",
     description: "Represented the organization at technology companies and interviewed business owners to document the technology initiative in Windsor.",
     tags: ["internship", "communication", "research"]
   },
   {
     title: "Medical Office Assistant",
     company: "Local Clinic",
-    period: "2015 - 2017",
+    period: "2019",
     description: "Updated and organized referral forms and handouts using electronic medical records repository, streamlining processes for medical staff.",
     tags: ["administration", "organization"]
   }

@@ -48,6 +48,7 @@ export default function Home() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        willChange: 'transform', // Optimize for animations
       }}
     >
       <Container maxW={'3xl'}>
@@ -86,7 +87,8 @@ export default function Home() {
               src={Me}
               alt="Ivy Wills"
               align="center"
-              layout="fill"
+              loading="eager"
+              decoding="async"
               style={{ borderRadius: '8px' }}
               rounded="md"
             />
