@@ -22,7 +22,7 @@ const experiences = [
   {
     title: "Fullstack Developer and IT Systems Manager",
     company: "Municipal Property Assessment Corporation",
-    period: "2022 - May 2025",
+    period: "2023 - 2025",
     description: "Developed React and Angular components to meet Winnipeg's RFP requirements, securing a ten-year, multi-million dollar contract. implementation of an OIDC solution with Keycloak introduced RBAC, audit logs, and session management. Replaced Flowable with Form.io, saving $400K annually while maintaining form management capabilities. Identified and fixed security vulnerabilities in frontend code and Dockerfiles.",
     tags: ["React", "Angular", "Keycloak", "Docker", "Form.io"]
   },
@@ -41,25 +41,22 @@ const experiences = [
     tags: ["React", "Python", "MongoDB", "REST API"]
   },
   {
-    title: "Robotics Teacher",
-    company: "St. Louis Catholic Elementary School",
-    period: "2018",
-    description: "Taught key robotics concepts to grades 3-4 students using hands-on demonstrations with robots and iPads. Created engaging presentations for parents.",
-    tags: ["teaching", "robotics", "presentation"]
-  },
-  {
     title: "WEtech Alliance Summer Intern",
     company: "WEtech Alliance",
     period: "2019",
-    description: "Represented the organization at technology companies and interviewed business owners to document the technology initiative in Windsor.",
-    tags: ["internship", "communication", "research"]
+    description: "Represented the organization at technology companies and interviewed business owners to document the technology initiative in Windsor."
   },
   {
     title: "Medical Office Assistant",
     company: "Local Clinic",
     period: "2019",
-    description: "Updated and organized referral forms and handouts using electronic medical records repository, streamlining processes for medical staff.",
-    tags: ["administration", "organization"]
+    description: "Updated and organized referral forms and handouts using electronic medical records repository, streamlining processes for medical staff."
+  },
+  {
+    title: "Robotics Teacher",
+    company: "St. Louis Catholic Elementary School",
+    period: "2018",
+    description: "Taught key robotics concepts to grades 3-4 students using hands-on demonstrations with robots and iPads. Created engaging presentations for parents."
   }
 ];
 
