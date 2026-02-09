@@ -3,7 +3,7 @@ import { lazy, Suspense } from 'react';
 import theme from './theme';
 import Nav from './components/Nav';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Box, Spinner, Center } from '@chakra-ui/react';
+import { Spinner, Center } from '@chakra-ui/react';
 
 // Lazy load pages for code splitting
 const Home = lazy(() => import('./pages/Home'));

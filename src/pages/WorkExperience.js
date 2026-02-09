@@ -16,8 +16,8 @@ const experiences = [
     title: "Frontend Developer",
     company: "Trax.co",
     period: "July 2025 - Present",
-    description: "Developing modern user interfaces using Vue.js to enhance product functionality and user experience. Writing comprehensive end-to-end tests with Playwright to ensure application reliability and quality. Collaborating with cross-functional teams to deliver high-quality frontend solutions.",
-    tags: ["Vue.js", "Playwright", "Testing", "UI Development"]
+    description: "Developing modern user interfaces using Vue.js to enhance product functionality and user experience. Writing comprehensive end-to-end tests with Playwright to ensure application reliability and quality. Implementing GraphQL queries and mutations to efficiently fetch and manage data across the application. Collaborating with cross-functional teams to deliver high-quality frontend solutions.",
+    tags: ["Vue.js", "Playwright", "GraphQL"]
   },
   {
     title: "Fullstack Developer and IT Systems Manager",
