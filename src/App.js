@@ -1,24 +1,36 @@
 import { ChakraProvider } from '@chakra-ui/react';
+import { lazy, Suspense } from 'react';
 import theme from './theme';
 import Nav from './components/Nav';
-import Home from './pages/Home';
-import Project from './pages/Projects';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Box, Spinner, Center } from '@chakra-ui/react';
 
-import Resume from './pages/Resume';
-import WorkExperience from './pages/WorkExperience';
+// Lazy load pages for code splitting
+const Home = lazy(() => import('./pages/Home'));
+const Projects = lazy(() => import('./pages/Projects'));
+const Resume = lazy(() => import('./pages/Resume'));
+const WorkExperience = lazy(() => import('./pages/WorkExperience'));
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <Center minH="100vh">
+    <Spinner size="xl" color="blue.500" thickness="4px" />
+  </Center>
+);
 
 const App = () => {
   return (
     <ChakraProvider theme={theme}>
       <Router>
         <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Project />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/work" element={<WorkExperience />} />
-        </Routes>
+        <Suspense fallback={<LoadingFallback />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/work" element={<WorkExperience />} />
+          </Routes>
+        </Suspense>
       </Router>
     </ChakraProvider>
   );
