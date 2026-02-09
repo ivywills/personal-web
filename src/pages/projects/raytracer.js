@@ -7,6 +7,7 @@ export default function RayTracer() {
       <Box align={'center'} mt={-3} mx={-3} mb={6} pos={'relative'}>
         <img
           src={Ray}
+          alt="Ray Tracer Output"
           w={'445px'}
           style={{ height: '300px' }}
           align={'center'}

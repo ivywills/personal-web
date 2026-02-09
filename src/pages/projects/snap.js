@@ -11,7 +11,7 @@ export default function Snap() {
           justify={'center'}
           layout={'fill'}
           style={{ height: '300px' }}
-          alt={'Your Alt Text Here'}
+          alt="SNAP User Management"
         />
       </Box>
       <Stack spacing={4}>

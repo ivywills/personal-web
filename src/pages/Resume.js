@@ -1,4 +1,4 @@
-import resumePic from './imgs/resume.png';
+import resumePic from '../assets/imgs/resume.png';
 import { Center, Stack } from '@chakra-ui/react';
 
 const Resume = () => {
@@ -6,7 +6,7 @@ const Resume = () => {
     <>
       <Center py={6}>
         <Stack m={6} direction={'row'} spacing={8} align={'center'}>
-          <img src={resumePic} layout={'fill'} />
+          <img src={resumePic} alt="Resume" layout={'fill'} />
         </Stack>
       </Center>
     </>

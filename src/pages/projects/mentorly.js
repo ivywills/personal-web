@@ -14,6 +14,7 @@ export default function Mentorly() {
       >
         <img
           src={HandShake}
+          alt="Mentorly Application"
           align={'center'}
           style={{ height: '300px' }}
           layout={'fill'}

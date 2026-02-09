@@ -8,6 +8,7 @@ export default function BookFinder() {
       <Box align={'center'} mt={-3} mx={-3} mb={6} pos={'relative'}>
         <img
           src={Book}
+          alt="Book Finder Application"
           w={'445px'}
           style={{ height: '300px' }}
           align={'center'}

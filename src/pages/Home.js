@@ -1,6 +1,6 @@
-import Me from './imgs/no_background.png';
-import gearThemeLight from './imgs/beautiful-forested-mountains-fog.jpg';
-import gearThemeDark from './imgs/northlandscapes-iceland-vik-foggy-coastline.jpg';
+import Me from '../assets/imgs/no_background.png';
+import gearThemeLight from '../assets/imgs/beautiful-forested-mountains-fog.jpg';
+import gearThemeDark from '../assets/imgs/northlandscapes-iceland-vik-foggy-coastline.jpg';
 
 import {
   Box,
@@ -11,24 +11,25 @@ import {
   Stack,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 
-const CustomButton = ({ href, children }) => {
+const CustomButton = ({ to, children }) => {
   return (
-    <a href={href}>
-      <Button
-        colorScheme={'green'}
-        bg={'green.400'}
-        rounded={'full'}
-        px={6}
-        _hover={{
-          bg: 'green.300',
-          transform: 'scale(1.1)',
-          transition: 'transform 0.3s ease-in-out',
-        }}
-      >
-        {children}
-      </Button>
-    </a>
+    <Button
+      as={RouterLink}
+      to={to}
+      colorScheme={'blue'}
+      bg={'blue.400'}
+      rounded={'full'}
+      px={6}
+      _hover={{
+        bg: 'blue.500',
+        transform: 'scale(1.05)',
+        transition: 'transform 0.3s ease-in-out',
+      }}
+    >
+      {children}
+    </Button>
   );
 };
 
@@ -58,7 +59,7 @@ export default function Home() {
         >
           <Heading
             fontWeight={600}
-            fontSize={{ base: '4xl', sm: '4xl', md: '6xl' }}
+            fontSize={{ base: '3xl', sm: '4xl', md: '5xl' }}
             lineHeight={'110%'}
             color={useColorModeValue('gray.800', 'gray.800')}
           >
@@ -77,12 +78,13 @@ export default function Home() {
             rounded="md"
             style={{ borderRadius: '8px' }}
             _hover={{
-              transform: 'scale(1.1)',
+              transform: 'scale(1.05)',
               transition: 'transform 0.3s ease-in-out',
             }}
           >
             <img
               src={Me}
+              alt="Ivy Wills"
               align="center"
               layout="fill"
               style={{ borderRadius: '8px' }}
@@ -115,8 +117,8 @@ export default function Home() {
             alignSelf={'center'}
             position={'relative'}
           >
-            <CustomButton href="/projects">Projects</CustomButton>
-            <CustomButton href="/work">Work Experience</CustomButton>
+            <CustomButton to="/projects">Projects</CustomButton>
+            <CustomButton to="/work">Work Experience</CustomButton>
           </Stack>
         </Stack>
       </Container>

@@ -1,11 +1,12 @@
-import { ChakraProvider, theme } from '@chakra-ui/react';
-import Nav from './nav.js';
-import Home from './home.js';
-import Project from './projects.js';
+import { ChakraProvider } from '@chakra-ui/react';
+import theme from './theme';
+import Nav from './components/Nav';
+import Home from './pages/Home';
+import Project from './pages/Projects';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Resume from './resume.js';
-import WorkExperience from './work-experience.js';
+import Resume from './pages/Resume';
+import WorkExperience from './pages/WorkExperience';
 
 const App = () => {
   return (
