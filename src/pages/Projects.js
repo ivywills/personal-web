@@ -11,10 +11,12 @@ import SNAP from './projects/snap.js';
 import Doodle from './projects/doodle.js';
 import RayTracer from './projects/raytracer.js';
 import BookFinder from './projects/book-finder.js';
+import Xecho from './projects/xecho.js';
 
 const MotionBox = motion(Box);
 
 const components = [
+  { name: 'xecho', component: Xecho },
   { name: 'BookFinder', component: BookFinder },
   { name: 'Mentorly', component: Mentorly },
   { name: 'RayTracer', component: RayTracer },

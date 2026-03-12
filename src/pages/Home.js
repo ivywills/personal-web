@@ -1,4 +1,4 @@
-import Me from '../assets/imgs/new-profile.jpeg';
+import Me from '../assets/imgs/image-profile.jpeg';
 import gearThemeLight from '../assets/imgs/beautiful-forested-mountains-fog.jpg';
 import gearThemeDark from '../assets/imgs/northlandscapes-iceland-vik-foggy-coastline.jpg';
 
@@ -9,25 +9,75 @@ import {
   Text,
   Button,
   Stack,
-  VStack,
   useColorModeValue,
+  SimpleGrid,
+  HStack,
+  Image,
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import Skills from './Skills';
 
-const CustomButton = ({ to, children }) => {
+const HomeButton = ({ to, children, variant = 'primary', tone = 'neutral', onClick }) => {
+  const linkProps = to ? { as: RouterLink, to } : {};
+  const primaryBg = useColorModeValue('gray.900', 'blue.200');
+  const primaryColor = useColorModeValue('white', 'gray.900');
+  const primaryHoverBg = useColorModeValue('gray.700', 'blue.100');
+  const secondaryStyles = {
+    neutral: {
+      bg: useColorModeValue('whiteAlpha.700', 'whiteAlpha.120'),
+      color: useColorModeValue('gray.700', 'gray.100'),
+      borderColor: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+      hoverBg: useColorModeValue('whiteAlpha.900', 'whiteAlpha.200'),
+    },
+    blue: {
+      bg: useColorModeValue('blue.50', 'blue.900'),
+      color: useColorModeValue('blue.800', 'blue.100'),
+      borderColor: useColorModeValue('blue.100', 'blue.700'),
+      hoverBg: useColorModeValue('blue.100', 'blue.800'),
+    },
+    cyan: {
+      bg: useColorModeValue('cyan.50', 'cyan.900'),
+      color: useColorModeValue('cyan.800', 'cyan.100'),
+      borderColor: useColorModeValue('cyan.100', 'cyan.700'),
+      hoverBg: useColorModeValue('cyan.100', 'cyan.800'),
+    },
+  };
+
+  if (variant === 'secondary') {
+    const style = secondaryStyles[tone] || secondaryStyles.neutral;
+    return (
+      <Button
+        {...linkProps}
+        onClick={onClick}
+        bg={style.bg}
+        color={style.color}
+        borderRadius="full"
+        px={5}
+        py={5}
+        border="1px solid"
+        borderColor={style.borderColor}
+        _hover={{
+          bg: style.hoverBg,
+          transform: 'translateY(-1px)',
+        }}
+      >
+        {children}
+      </Button>
+    );
+  }
+
   return (
     <Button
-      as={RouterLink}
-      to={to}
-      colorScheme={'blue'}
-      bg={'blue.400'}
-      rounded={'full'}
-      px={6}
+      {...linkProps}
+      onClick={onClick}
+      color={primaryColor}
+      bg={primaryBg}
+      borderRadius="full"
+      px={5}
+      py={5}
       _hover={{
-        bg: 'blue.500',
-        transform: 'scale(1.05)',
-        transition: 'transform 0.3s ease-in-out',
+        bg: primaryHoverBg,
+        transform: 'translateY(-1px)',
       }}
     >
       {children}
@@ -36,8 +86,28 @@ const CustomButton = ({ to, children }) => {
 };
 
 export default function Home() {
-  const isMobile = window.innerWidth < 768;
   const gearTheme = useColorModeValue(gearThemeLight, gearThemeDark);
+  const pageBg = useColorModeValue('#f6f7fb', '#0f1723');
+  const overlayColor = useColorModeValue(
+    'linear-gradient(180deg, rgba(232, 241, 255, 0.84), rgba(228, 239, 255, 0.6))',
+    'linear-gradient(180deg, rgba(13, 24, 40, 0.8), rgba(13, 24, 40, 0.62))'
+  );
+  const backgroundOpacity = useColorModeValue(0.45, 0.28);
+  const panelBg = useColorModeValue('rgba(244, 248, 255, 0.84)', 'rgba(17, 25, 39, 0.84)');
+  const panelBorder = useColorModeValue('blackAlpha.100', 'whiteAlpha.140');
+  const headingColor = useColorModeValue('gray.900', 'white');
+  const bodyColor = useColorModeValue('gray.700', 'gray.300');
+  const eyebrowColor = useColorModeValue('blue.700', 'cyan.200');
+  const scrollButtonBg = useColorModeValue('whiteAlpha.900', 'whiteAlpha.120');
+  const scrollButtonHoverBg = useColorModeValue('white', 'whiteAlpha.200');
+  const profileShadow = useColorModeValue(
+    '18px 24px 54px rgba(116, 156, 226, 0.28)',
+    '0 24px 60px rgba(0, 0, 0, 0.38)'
+  );
+  const profileGlow = useColorModeValue(
+    'linear-gradient(135deg, rgba(139, 190, 255, 0.6), rgba(139, 190, 255, 0.18))',
+    'linear-gradient(180deg, rgba(72, 117, 209, 0.3), rgba(72, 117, 209, 0.08))'
+  );
 
   const scrollToSkills = () => {
     const skillsSection = document.getElementById('skills-section');
@@ -48,147 +118,130 @@ export default function Home() {
 
   return (
     <>
-      <div
-        style={{
-          backgroundImage: `url(${gearTheme})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          minHeight: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          position: 'relative',
-        }}
-      >
-        <Container maxW={'3xl'} flex="1" display="flex" alignItems="flex-start">
-          <Stack
-            as={Box}
-            textAlign={'center'}
-            spacing={{ base: 4, md: 8 }}
-            pt={{ base: 12, md: 12 }}
-          >
-            <Heading
-              fontWeight={600}
-              fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
-              lineHeight={'110%'}
-              bgGradient="linear(to-r, blue.400, blue.600, cyan.400)"
-              bgClip="text"
-              pb={3}
-              _hover={{
-                bgGradient: "linear(to-r, cyan.400, blue.600, blue.400)",
-                transition: "background 0.5s ease-in-out"
-              }}
-            >
-              Ivy Wills <br />
-            </Heading>
-            <Box
-              align="center"
-              textAlign="center"
-              alignSelf="center"
-              bg="gray.100"
-              w={isMobile ? '220px' : '250px'}
-              mt={isMobile ? 0 : -8}
-              mx={-1}
-              mb={-4}
-              pos="relative"
-              rounded="md"
-              style={{ borderRadius: '8px' }}
-              _hover={{
-                transform: 'scale(1.05)',
-                transition: 'transform 0.3s ease-in-out',
-              }}
-            >
-              <img
-                src={Me}
-                alt="Ivy Wills"
-                align="center"
-                loading="eager"
-                decoding="async"
-                style={{ borderRadius: '8px' }}
-                rounded="md"
-              />
-            </Box>
-            <Box
-              bg="rgba(128, 128, 128, 0.8)"
-              borderRadius="md"
-              px={4}
-              py={2}
-              mt={isMobile ? 4 : 0}
-            >
-              <Text
-                fontSize={{ base: 'sm', md: 'md' }}
-                color={useColorModeValue('gray.100', 'black')}
-              >
-                I am an experienced Full-stack Developer. Skilled in React.js,
-                Angular, Python, and modern web technologies, I design and
-                implement responsive, user-centric interfaces and efficient
-                backend systems. I have a proven track record in leading
-                development efforts, optimizing performance, and implementing
-                secure, efficient workflows.
-              </Text>
-            </Box>
-            <Stack
-              direction={'row'}
-              spacing={3}
-              align={'center'}
-              alignSelf={'center'}
-              position={'relative'}
-            >
-              <CustomButton to="/projects">Projects</CustomButton>
-              <CustomButton to="/work">Work Experience</CustomButton>
-            </Stack>
-          </Stack>
-        </Container>
-
-        {/* Animated Scroll Indicator */}
+      <Box position="relative" overflow="hidden" bg={pageBg}>
         <Box
           position="absolute"
-          bottom="80px"
-          left="50%"
-          transform="translateX(-50%)"
-          cursor="pointer"
-          onClick={scrollToSkills}
-          zIndex={10}
-          background="radial-gradient(ellipse, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0.6) 45%, rgba(255, 255, 255, 0) 75%)"
-          borderRadius="2xl"
-          px={14}
-          py={8}
-          _hover={{
-            transform: "translateX(-50%) scale(1.08)",
-            transition: "all 0.3s ease"
-          }}
+          inset={0}
+          bgImage={`${overlayColor}, url(${gearTheme})`}
+          bgSize="cover"
+          bgPosition="center"
+          opacity={backgroundOpacity}
+        />
+        <Box
+          position="absolute"
+          top={{ base: '-70px', md: '-110px' }}
+          right={{ base: '-90px', md: '-20px' }}
+          w={{ base: '240px', md: '340px' }}
+          h={{ base: '240px', md: '340px' }}
+          bg="blue.200"
+          opacity={0.18}
+          filter="blur(90px)"
+          borderRadius="full"
+          pointerEvents="none"
+        />
+
+        <Container
+          maxW="6xl"
+          position="relative"
+          zIndex={1}
+          pt={{ base: 10, md: 14 }}
+          pb={{ base: 12, md: 16 }}
         >
-          <VStack spacing={1}>
+          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 8, lg: 10 }} alignItems="center">
+            <Stack spacing={{ base: 5, md: 6 }} maxW="xl">
+              <Text
+                fontSize="sm"
+                fontWeight="700"
+                letterSpacing="0.16em"
+                textTransform="uppercase"
+                color={eyebrowColor}
+              >
+                About Me
+              </Text>
+
+              <Heading
+                fontSize={{ base: '3xl', md: '5xl' }}
+                lineHeight={{ base: '1.1', md: '1.05' }}
+                color={headingColor}
+              >
+                Hello, I&apos;m Ivy.
+              </Heading>
+
+              <Text color={bodyColor} fontSize={{ base: 'md', md: 'lg' }} lineHeight="tall">
+                I&apos;m a full-stack developer focused on building clean,
+                thoughtful web experiences.
+              </Text>
+
+              <HStack spacing={3} flexWrap="wrap">
+                <HomeButton to="/projects">Projects</HomeButton>
+                <HomeButton to="/work" variant="secondary" tone="blue">
+                  Experience
+                </HomeButton>
+                <HomeButton onClick={scrollToSkills} variant="secondary" tone="cyan">
+                  Skills
+                </HomeButton>
+              </HStack>
+            </Stack>
+
             <Box
-              as="div"
-              animation="bounce 2s infinite"
-              sx={{
-                '@keyframes bounce': {
-                  '0%, 100%': { transform: 'translateY(0)' },
-                  '50%': { transform: 'translateY(-2px)' },
-                }
+              position="relative"
+              maxW={{ base: '420px', lg: '480px' }}
+              mx="auto"
+              w="100%"
+              bg={panelBg}
+              border="1px solid"
+              borderColor={panelBorder}
+              borderRadius="3xl"
+              p={{ base: 4, md: 5 }}
+              boxShadow={profileShadow}
+              backdropFilter="blur(14px)"
+            >
+              <Box
+                position="absolute"
+                top={{ base: '28px', md: '34px' }}
+                left={{ base: '56px', md: '72px' }}
+                right={{ base: '-22px', md: '-30px' }}
+                bottom={{ base: '-24px', md: '-32px' }}
+                bgImage={profileGlow}
+                opacity={1}
+                filter="blur(22px)"
+                borderRadius="3xl"
+                zIndex={0}
+              />
+              <Image
+                src={Me}
+                alt="Ivy Wills"
+                position="relative"
+                zIndex={1}
+                w="100%"
+                h={{ base: '420px', md: '560px' }}
+                objectFit="cover"
+                borderRadius="2xl"
+              />
+            </Box>
+          </SimpleGrid>
+
+          <Box mt={{ base: 6, md: 8 }} display={{ base: 'none', md: 'block' }}>
+            <Button
+              onClick={scrollToSkills}
+              bg={scrollButtonBg}
+              border="1px solid"
+              borderColor={panelBorder}
+              borderRadius="full"
+              px={5}
+              py={6}
+              color={headingColor}
+              _hover={{
+                bg: scrollButtonHoverBg,
+                transform: 'translateY(-1px)',
               }}
             >
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#3182CE"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </Box>
-          </VStack>
-        </Box>
-      </div>
+              Scroll to skills
+            </Button>
+          </Box>
+        </Container>
+      </Box>
 
-      {/* Skills Section with ID */}
       <div id="skills-section">
         <Skills />
       </div>
