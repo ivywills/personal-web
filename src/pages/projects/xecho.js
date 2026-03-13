@@ -1,6 +1,6 @@
 import { Box, Heading, Text, Stack } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-import XECHO from './imgs/xecho-square-breathing.svg';
+import XECHO from './imgs/xecho-square-breathing.png';
 
 export default function Xecho() {
   return (
