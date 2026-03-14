@@ -16,8 +16,8 @@ import Xecho from './projects/xecho.js';
 const MotionBox = motion(Box);
 
 const components = [
-  { name: 'xecho', component: Xecho },
   { name: 'BookFinder', component: BookFinder },
+  { name: 'xecho', component: Xecho },
   { name: 'Mentorly', component: Mentorly },
   { name: 'RayTracer', component: RayTracer },
   { name: 'SNAP', component: SNAP },
