@@ -1,17 +1,12 @@
-import { Box, Heading, Text, Stack } from '@chakra-ui/react';
+import { Heading, Text, Stack } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import XECHO from './imgs/xecho-square-breathing.png';
+import ProjectImage from './project-image';
 
 export default function Xecho() {
   return (
     <>
-      <Box align={'center'} mt={-3} mx={-3} mb={6} pos={'relative'}>
-        <img
-          src={XECHO}
-          alt="xecho square breathing activity"
-          style={{ height: '300px', width: '100%', objectFit: 'contain' }}
-        />
-      </Box>
+      <ProjectImage src={XECHO} alt="xecho square breathing activity" />
       <Stack spacing={4}>
         <Heading fontSize={'2xl'} fontFamily={'body'}>
           <a
