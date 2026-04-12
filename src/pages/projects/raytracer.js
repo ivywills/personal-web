@@ -1,19 +1,11 @@
-import { Box, Heading, Text, Stack } from '@chakra-ui/react';
+import { Heading, Text, Stack } from '@chakra-ui/react';
 import Ray from './imgs/ray-tracer.png';
+import ProjectImage from './project-image';
 
 export default function RayTracer() {
   return (
     <>
-      <Box align={'center'} mt={-3} mx={-3} mb={6} pos={'relative'}>
-        <img
-          src={Ray}
-          alt="Ray Tracer Output"
-          w={'445px'}
-          style={{ height: '300px' }}
-          align={'center'}
-          layout={'fill'}
-        />
-      </Box>
+      <ProjectImage src={Ray} alt="Ray Tracer Output" />
       <Stack spacing={4}>
         <Heading fontSize={'2xl'} fontFamily={'body'}>
           Ray Tracer

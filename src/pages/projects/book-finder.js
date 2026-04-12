@@ -1,20 +1,12 @@
-import { Box, Heading, Text, Stack } from '@chakra-ui/react';
-import Book from './imgs/book-finder.png';
+import { Heading, Text, Stack } from '@chakra-ui/react';
+import Book from './imgs/book-finder-2.png';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
+import ProjectImage from './project-image';
 
 export default function BookFinder() {
   return (
     <>
-      <Box align={'center'} mt={-3} mx={-3} mb={6} pos={'relative'}>
-        <img
-          src={Book}
-          alt="Book Finder Application"
-          w={'445px'}
-          style={{ height: '300px' }}
-          align={'center'}
-          layout={'fill'}
-        />
-      </Box>
+      <ProjectImage src={Book} alt="Book Finder Application" />
       <Stack spacing={4}>
         <Heading fontSize={'2xl'} fontFamily={'body'}>
           <a

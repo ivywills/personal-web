@@ -1,25 +1,11 @@
-import { Box, Heading, Text, Stack } from '@chakra-ui/react';
+import { Heading, Text, Stack } from '@chakra-ui/react';
 import HandShake from './imgs/handshake_men_01.jpg';
+import ProjectImage from './project-image';
 
 export default function Mentorly() {
   return (
     <>
-      <Box
-        align={'center'}
-        bg={'gray.100'}
-        mt={-3}
-        mx={-3}
-        mb={6}
-        pos={'relative'}
-      >
-        <img
-          src={HandShake}
-          alt="Mentorly Application"
-          align={'center'}
-          style={{ height: '300px' }}
-          layout={'fill'}
-        />
-      </Box>
+      <ProjectImage src={HandShake} alt="Mentorly Application" />
       <Stack spacing={4}>
         <Heading fontSize={'2xl'} fontFamily={'body'}>
           Mentorly

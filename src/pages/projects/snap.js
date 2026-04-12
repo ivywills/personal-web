@@ -1,19 +1,11 @@
-import { Box, Heading, Text, Stack } from '@chakra-ui/react';
+import { Heading, Text, Stack } from '@chakra-ui/react';
 import SNAP from './imgs/snap.png';
+import ProjectImage from './project-image';
 
 export default function Snap() {
   return (
     <>
-      <Box align={'center'} mt={-3} mx={-3} mb={6} pos={'relative'}>
-        <img
-          src={SNAP}
-          align={'center'}
-          justify={'center'}
-          layout={'fill'}
-          style={{ height: '300px' }}
-          alt="SNAP User Management"
-        />
-      </Box>
+      <ProjectImage src={SNAP} alt="SNAP User Management" />
       <Stack spacing={4}>
         <Heading fontSize={'2xl'} fontFamily={'body'}>
           SNAP
